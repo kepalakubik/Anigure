@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="https://ryanotoki.github.io/Anigure/img/anigure.jpg" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        
+        <!-- Primary Meta Tags -->
+        <title>Anigure</title>
+        <meta name="title" content="Anigure" />
+        <meta name="description" content="Tempat terbaik untuk kebutuhan koleksi figure mu" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ryanotoki.github.io/anigure" />
+        <meta property="og:title" content="Anigure" />
+        <meta property="og:description" content="Tempat terbaik untuk kebutuhan koleksi figure mu" />
+        <meta property="og:image" content="https://ryanotoki.github.io/Anigure/img/anigure.jpg" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:url" content="https://ryanotoki.github.io/anigure" />
+        <meta property="twitter:title" content="Anigure" />
+        <meta property="twitter:description" content="Tempat terbaik untuk kebutuhan koleksi figure mu" />
+        <meta property="twitter:image" content="https://ryanotoki.github.io/Anigure/img/anigure.jpg" />
+    </head>
+    <body class="bg-light">
+        <div class="loading">
+            <div class="spinner-border" style="color: #6DC8E3;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand sticky-top" style="background: #6DC8E3;">
+            <div class="container-lg text-white">
+                <a class="navbar-brand text-white" href="."><b>Anigure</b></a>
+                <div class="lh-1">
+                    <button onclick="notImplemented();" type="submit"><i class="bx bx-basket"></i></button>
+                    <button onclick="notImplemented();" type="submit"><i class="bx bx-search"></i></button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="popup-modal hidden">
+            <button onclick="closeProduct();" class="close"><i class="bx bx-x"></i></button>
+            <div class="container-lg h-100 d-flex align-items-center">
+            <div class="popup rounded-2 hidden">
+                <div class="row row-cols-1 row-cols-md-2 gy-2 gy-md-0">
+                    <div class="col col-md-5 left">
+                        <div class="thumb rounded-2">
+                            <img alt="Thumbnail" width="100%" />
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <div class="h4 m-0 popup-product-title">Unknown</div>
+                        <div class="h5 m-0 text-info popup-product-price">Rp 0</div>
+                        <div class="opacity-50 small">Terjual <span class="popup-product-sold">0</span> | <i class="lh-1 bx bxs-star"></i> <span class="popup-product-rating">0</span>/5</div>
+                        
+                        <ul class="mb-4 mt-4">
+                            <li class="d-flex flex-column">
+                                <span class="fw-bolder">Dari</span>
+                                <span class="popup-product-from">Unknown</span>
+                            </li>
+                            <li class="d-flex flex-column">
+                                <span class="fw-bolder">Tipe</span>
+                                <span class="popup-product-type">Unknown</span>
+                            </li>
+                            <li class="d-flex flex-column">
+                                <span class="fw-bolder">Produsen</span>
+                                <span class="popup-product-producer">Unknown</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="row row-cols-2 gx-1 gy-0">
+                            <div class="col"><button onclick="notImplemented();" class="btn btn-info text-white w-100" type="submit">Beli Sekarang</button></div>
+                            <div class="col"><button onclick="notImplemented();" class="btn btn-outline-info w-100" type="submit">+ Keranjang</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div id="header" class="container-lg mb-5">
+            <div class="row row-cols-1 row-cols-md-2 mt-3 gy-4 gy-md-0">
+                <div class="col text-center text-md-start d-flex align-items-md-center">
+                    <div>
+                    <h1><b>Tempat terbaik untuk kebutuhan koleksi figure mu</b></h1>
+                    <small>Dari anime, manga, game, semuanya kalian bisa dapatkan disini!</small>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/blob-header.png" alt="Blob" width="100%" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="products" class="container-lg mb-4">
+            <h4>Daftar Produk</h4>
+            <div class="w-100 bg-white shadow-custom rounded-2 p-3">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 gx-2 gy-3">
+                    <!-- Dummy Element Product -->
+                    <div class="col product dummy" onclick="product(this.id)" style="display: none;">
+                        <div class="thumb rounded-1">
+                            <img alt="Thumbnail" width="100%" />
+                        </div>
+                        <div class="mb-4">
+                            <div class="product-title fw-bolder small">Dummy</div>
+                            <div class="from small opacity-50">Dummy</div>
+                        </div>
+                        <span class="price text-info">Rp 0</span>
+                    </div>
+                    <!-- End Dummy -->
+                </div>
+                
+                <div class="text-center mt-3">
+                    <!-- Loading product -->
+                    <div class="w-100 text-center product-loading">
+                        <div class="spinner-border mb-1" style="color: #6DC8E3;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <br />
+                        <span>Memuat Produk...</span>
+                    </div>
+                    <!-- End Loading -->
+                    
+                    <!-- Load More button -->
+                    <button onclick="loadMore();" class="btn btn-outline-info d-none more" type="submit">Muat Lainnya</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="w-100 text-white" style="background: #6DC8E3;">
+            <div class="container-lg p-3">
+                <span class="h3 fw-bolder">Anigure</span>
+                <ul>
+                    <li><a class="small" href=".">Halaman Utama</a></li>
+                    <li><a class="small" href=".#products">Daftar Produk</a></li>
+                    <li><a class="small" href="https://palestinecampaign.org">Free Palestine 🇵🇸</a></li>
+                </ul>
+                <br />
+                <small>Dibuat menggunakan Bootstrap 5 dan <i class="bx bxs-heart"></i></small>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
